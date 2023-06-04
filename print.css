@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+@page {
+    margin: 0;
+} /* removes print page header and footer */
+
+/*#region COMMONS*/
+
+* {
+    --side-padding: 2em;
+    --col-template: 22.5% 1fr;
+}
+
+body {
+    display: flex;
+    row-gap: 1.5em;
+    flex-direction: column;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+}
+
+a {
+    color: initial;
+    text-decoration: none;
+}
+
+a:visited {
+    color: initial;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+/*#endregion COMMONS*/
+
+/*#region HEADER*/
+
+header {
+    display: grid;
+    padding: 1em var(--side-padding);
+    position: relative;
+    column-gap: 0.5em;
+    grid-template-columns: var(--col-template);
+    grid-template-areas:
+        "pic name"
+        "pic job-title"
+        "pic links";
+}
+
+header img#picture {
+    width: 120px;
+    height: 120px;
+    grid-area: pic;
+    align-self: center;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--first-color);
+}
+
+header h1 {
+    display: flex;
+    grid-area: name;
+    font-size: 3.5em;
+    font-weight: normal;
+    align-items: flex-end;
+    letter-spacing: 5px;
+}
+
+header h1 span#surname {
+    color: var(--first-color);
+    font-weight: bold;
+    margin-left: 0.25em;
+}
+
+header h2#job-title {
+    color: var(--third-color);
+    display: flex;
+    grid-area: job-title;
+    font-size: 1.25em;
+    column-gap: 1em;
+    font-weight: normal;
+    align-items: center;
+    letter-spacing: 3.5px;
+}
+
+header h2#job-title::after {
+    flex: 1;
+    height: 1px;
+    content: "";
+    background-color: var(--second-color);
+}
+
+header ol#quick-links {
+    display: flex;
+    row-gap: 0.5em;
+    grid-area: links;
+    margin-top: 0.75em;
+    flex-direction: column;
+}
+
+header ol#quick-links a {
+    color: var(--second-color);
+    display: flex;
+    font-size: 0;
+    align-items: center;
+}
+
+header ol#quick-links a::before {
+    font-size: 1.2rem;
+    margin-right: 0.5em;
+}
+
+header ol#quick-links a::after {
+    content: attr(href);
+    font-size: 1rem;
+}
+
+header ol#quick-links li#print,
+header ol#quick-links li.translate {
+    display: none !important;
+}
+
+/*#endregion HEADER*/
+
+/*#region SECTIONS */
+
+section.section {
+    padding: 0 2rem;
+}
+
+section.section h3 {
+    color: var(--second-color);
+    display: flex;
+    position: relative;
+    font-size: 1em;
+    column-gap: 1em;
+    align-items: center;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+}
+
+section.section h3::before {
+    top: -0.5em;
+    left: calc(-1 * var(--side-padding));
+    width: 15%;
+    bottom: -0.5em;
+    content: "";
+    z-index: -1;
+    position: absolute;
+    background-color: var(--first-color);
+}
+
+section.section h3::after {
+    flex: 1;
+    height: 1px;
+    content: "";
+    background-color: var(--third-color);
+}
+
+section.breakpage {
+    page-break-before: always;
+}
+
+/*#endregion SECTIONS */
+
+/*#region INFO */
+
+section.section.personal-info dl {
+    display: grid;
+    row-gap: 0.5em;
+    grid-template-columns: var(--col-template);
+}
+
+section.section.personal-info dl dt {
+    grid-column: 1;
+}
+
+section.section.personal-info dl dd {
+    grid-column: 2;
+}
+
+/*#endregion INFO */
+
+/*#region EXPERIENCE_SECTION */
+
+section.section.experience ol {
+    display: flex;
+    row-gap: 1em;
+    flex-direction: column;
+}
+
+section.section.experience ul.company {
+    display: grid;
+    row-gap: 0.5em;
+    grid-template-columns: var(--col-template);
+    grid-template-areas:
+        "name role"
+        "period description"
+        ". description";
+}
+
+section.section.experience ul.company li.name {
+    grid-area: name;
+}
+
+section.section.experience ul.company li.role {
+    grid-area: role;
+    font-weight: bold;
+}
+
+section.section.experience ul.company li.period {
+    color: var(--third-color);
+    grid-area: period;
+}
+
+section.section.experience ul.company li.description {
+    grid-area: description;
+}
+
+/*#endregion EXPERIENCE_SECTION */
+
+/*#region EDUCATION_SECTION */
+
+section.section.education ol {
+    display: flex;
+    row-gap: 1em;
+    flex-direction: column;
+}
+
+section.section.education ul.institute {
+    display: grid;
+    row-gap: 0.5em;
+    grid-template-columns: var(--col-template);
+    grid-template-areas:
+        "period title"
+        "grade name"
+        ". description";
+}
+
+section.section.education ul.institute li.title {
+    grid-area: title;
+    font-weight: bold;
+}
+
+section.section.education ul.institute li.name {
+    grid-area: name;
+}
+
+section.section.education ul.institute li.grade {
+    color: var(--third-color);
+    grid-area: grade;
+}
+
+section.section.education ul.institute li.period {
+    grid-area: period;
+}
+
+section.section.education ul.institute li.description {
+    grid-area: description;
+}
+
+/*#endregion EDUCATION_SECTION */
+
+/*#region SKILLS_SECTION */
+
+section.section.skills ol {
+    display: flex;
+    row-gap: 0.5em;
+    flex-direction: column;
+}
+
+section.section.skills ol li {
+    display: grid;
+    grid-template-columns: var(--col-template);
+}
+
+section.section.skills ol li span.name {
+    grid-column: 1;
+}
+
+section.section.skills ol li span.description {
+    grid-column: 2;
+}
+
+/*#endregion SKILLS_SECTION */
+
+/*#region CERTIFICATIONS_SECTION */
+
+section.section.certifications ul {
+    display: grid;
+    grid-template-columns: var(--col-template);
+    grid-template-areas:
+        "badge title"
+        "badge period";
+}
+
+section.section.certifications ul li.badge {
+    grid-area: badge;
+}
+
+section.section.certifications ul li.title {
+    grid-area: title;
+    font-weight: bold;
+    align-self: center;
+}
+
+section.section.certifications ul li.period {
+    grid-area: period;
+    align-self: flex-start;
+}
+
+/*#endregion SKILLS_SECTION */

@@ -1,0 +1,123 @@
+/*#region HEADER*/
+
+header {
+    height: 60vh;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-template-areas:
+        "pic pic"
+        "name name"
+        "job-title links";
+}
+
+header::before {
+    display: none;
+}
+
+header img#picture {
+    right: 0;
+    width: 150px;
+    height: 150px;
+    align-self: flex-end;
+    justify-self: center;
+}
+
+header h1#full-name {
+    text-align: center;
+    padding-left: 0;
+}
+
+header h1#full-name span#surname {
+    font-size: 1.2em;
+}
+
+header h2#job-title {
+    text-align: right;
+    padding-left: 0;
+}
+
+/*#endregion HEADER*/
+
+/*#region INFO */
+
+section.section.personal-info {
+    height: 40vh;
+    margin: 0 1.5rem;
+}
+
+section.section.personal-info dl {
+    width: 100%;
+    display: flex;
+    row-gap: 0.75em;
+    margin-left: 0;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section.section.personal-info dt {
+    align-self: initial;
+}
+
+/*#endregion INFO */
+
+/*#region SECTIONS */
+
+section.section {
+    grid-template-columns: auto;
+}
+
+section.section h3 {
+    justify-content: flex-start;
+}
+
+section.section ol,
+section.section ul {
+    padding: 1.5rem;
+}
+
+section.section ol li ul {
+    grid-template-columns: auto;
+}
+
+/*#endregion SECTIONS */
+
+/*#region EXPERIENCE_SECTION */
+
+section.section.experience ol li ul.company {
+    grid-template-rows: auto;
+    grid-template-areas:
+        "name"
+        "role"
+        "period"
+        "description";
+}
+
+/*#endregion EXPERIENCE_SECTION */
+
+/*#region EDUCATION_SECTION */
+
+section.section.education ol li ul.institute {
+    grid-template-rows: auto;
+    grid-template-areas:
+        "period"
+        "title"
+        "name"
+        "grade"
+        "description";
+}
+
+/*#endregion EDUCATION_SECTION */
+
+/*#region SKILLS_SECTION */
+
+section.section.skills ol {
+    display: flex;
+    flex-direction: column;
+}
+
+section.section.skills ol li {
+    padding: 0.5em 1.5rem;
+}
+
+/*#endregion SKILLS_SECTION */

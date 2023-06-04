@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+/*#region HEADER*/
+
+header {
+    gap: 0.5rem;
+    height: 85vh;
+    display: grid;
+    position: relative;
+    grid-template-rows: 1fr 5em 1.5em 1fr;
+    grid-template-columns: 20% 20% fit-content(100%) 1fr;
+    grid-template-areas:
+        ". . . . ."
+        ". pic name name ."
+        ". pic job-title links ."
+        ". . . . .";
+}
+
+header::before {
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100vh;
+    content: "";
+    position: absolute;
+    background-color: #fbfbfb;
+}
+
+header img#picture {
+    right: 10%;
+    width: 180px;
+    height: 180px;
+    z-index: 2;
+    position: relative;
+    grid-area: pic;
+    object-fit: cover;
+    align-self: center;
+    border-radius: 50%;
+    justify-self: flex-end;
+}
+
+header h1#full-name {
+    color: var(--second-color);
+    grid-area: name;
+    align-self: flex-end;
+    font-weight: initial;
+    padding-left: 1.5rem;
+}
+
+header h1#full-name span#surname {
+    color: var(--first-color);
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 0.8em;
+    text-indent: -0.05em;
+    text-transform: uppercase;
+}
+
+header h2#job-title {
+    color: var(--third-color);
+    font-size: 1.2rem;
+    grid-area: job-title;
+    font-weight: normal;
+    padding-left: 1.5rem;
+}
+
+header ol#quick-links {
+    display: flex;
+    grid-area: links;
+    column-gap: 5px;
+    list-style: none;
+    padding-top: 3px;
+}
+
+header ol#quick-links li a {
+    font-size: 0;
+}
+
+header ol#quick-links li a::before {
+    font-size: initial;
+}
+
+header ol#quick-links li#print a {
+    cursor: pointer;
+}
+
+header ol#quick-links li.translate {
+    top: 1em;
+    right: 2em;
+    position: absolute;
+}
+
+header ol#quick-links li.translate button {
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+/*#endregion HEADER*/
+
+/*#region INFO */
+
+section.section.personal-info {
+    height: 15vh;
+    display: block;
+    z-index: 2;
+    position: relative;
+}
+
+section.section.personal-info h3 {
+    display: none;
+}
+
+section.section.personal-info dl {
+    width: 58%;
+    height: 100%;
+    display: grid;
+    row-gap: 1em;
+    font-size: 0.9em;
+    border-top: 2px solid #ebebeb;
+    margin-left: 41%;
+    justify-content: space-around;
+    grid-template-rows: 1fr 1fr;
+}
+
+section.section.personal-info dt {
+    grid-row: 1;
+    align-self: flex-end;
+    font-weight: bold;
+}
+
+section.section.personal-info dd {
+    grid-row: 2;
+}
+
+/*#endregion INFO */
+
+/*#region SECTIONS */
+
+section.section {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+}
+
+section.section h3 {
+    margin: 0;
+    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #fbfbfb;
+}
+
+section.section:nth-child(even) h3 {
+    background-color: #f5f5f5;
+}
+
+section.section ol,
+section.section ul {
+    padding: 2.5rem;
+    list-style: none;
+}
+
+section.section ol > li {
+    padding: 0.5em;
+    position: relative;
+    padding-bottom: 0;
+}
+
+section.section ol > li:before {
+    top: 9px;
+    left: 4px;
+    width: 10px;
+    height: 10px;
+    content: "\00a0 ";
+    position: absolute;
+    border-radius: 50%;
+    background-color: #fdb833;
+}
+
+section.section ol li ul {
+    display: grid;
+    padding: 0;
+    row-gap: 0.25em;
+    list-style: none;
+    border-left: 2px solid #ebebeb;
+    padding-left: 0.5em;
+    grid-template-columns: 40% 60%;
+}
+
+/*#endregion SECTIONS */
+
+/*#region EXPERIENCE_SECTION */
+
+section.section.experience ol li ul.company {
+    grid-template-rows: 1em 1.5em 1em 1fr;
+    grid-template-areas:
+        "name description"
+        "role description"
+        "period description"
+        ". description";
+}
+
+section.section.experience ul.company li.name {
+    grid-area: name;
+}
+
+section.section.experience ul.company li.role {
+    grid-area: role;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+section.section.experience ul.company li.period {
+    grid-area: period;
+}
+
+section.section.experience ul.company li.description {
+    grid-area: description;
+}
+
+/*#endregion EXPERIENCE_SECTION */
+
+/*#region EDUCATION_SECTION */
+
+section.section.education ol li ul.institute {
+    grid-template-rows: 1em 1.5em 1em 1em 1fr;
+    grid-template-areas:
+        "period description"
+        "title description"
+        "name description"
+        "grade description";
+}
+
+section.section.education ul.institute li.title {
+    grid-area: title;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+section.section.education ul.institute li.name {
+    grid-area: name;
+}
+
+section.section.education ul.institute li.grade {
+    grid-area: grade;
+}
+
+section.section.education ul.institute li.period {
+    grid-area: period;
+}
+
+section.section.education ul.institute li.description {
+    grid-area: description;
+}
+
+/*#endregion EDUCATION_SECTION */
+
+/*#region SKILLS_SECTION */
+
+section.section.skills ol {
+    display: grid;
+    padding: 1em;
+    list-style: none;
+    grid-template-columns: 1fr 1fr;
+}
+
+section.section.skills ol li {
+    padding: 0.5em 2.5em;
+    counter-increment: section;
+}
+
+section.section.skills ol li::before {
+    display: none;
+}
+
+section.section.skills ol li:nth-child(odd) {
+    grid-column: 1;
+}
+
+section.section.skills ol li:nth-child(even) {
+    grid-column: 2;
+}
+
+section.section.skills ol li span.name {
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+section.section.skills ol li span.name:before {
+    content: "0" counter(section);
+    color: #fdb833;
+    font-size: 2em;
+    font-weight: bold;
+    margin-right: 0.5em;
+    background-color: white;
+}
+
+section.section.skills ol li span.description {
+    padding: 0.25em;
+}
+
+/*#endregion SKILLS_SECTION */
+
+/*#region CERTIFICATIONS_SECTION */
+
+section.section.certifications ol > li {
+    padding: 0;
+}
+
+section.section.certifications ol > li::before {
+    display: none;
+}
+
+section.section.certifications ol li ul {
+    border-left: none;
+    justify-content: center;
+    grid-template-columns: auto;
+}
+
+section.section.certifications ol li ul li.badge {
+    width: 100px;
+    height: 90px;
+    grid-row: 1;
+    justify-self: center;
+}
+
+section.section.certifications ol li ul li.title {
+    font-weight: bold;
+}
+
+section.section.certifications ol li ul li.period {
+    color: #797c7c;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+/*#endregion SKILLS_SECTION */

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Federico Casotto Curriculum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="commons.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="desktop.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 768px)" href="mobile.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="print.css" />
+</head>
+
+<body>
+    <header>
+        <img id="picture" src="profile.jpg" alt="Profile picture" width="140" height="180" />
+        <h1 id="full-name"><span id="name">Federico</span> <span id="surname">Casotto</span></h1>
+        <h2 id="job-title">Full Stack Developer</h2>
+        <ol id="quick-links">
+            <li>
+                <a href="https://www.linkedin.com/in/federico-casotto-226849115/" class="fab fa-linkedin">LinkedIn</a>
+            </li>
+            <li><a href="https://github.com/fede0990" class="fab fa-github">GitHub</a></li>
+            <li id="print"><a class="fas fa-print" onclick="window.print()">Stampa il curriculum</a></li>
+            <li class="translate en"><button onclick="setLocale('en')">English version</button></li>
+            <li class="translate it"><button onclick="setLocale('it')">Versione italiana</button></li>
+        </ol>
+    </header>
+    <section class="section personal-info">
+        <h3>Informazioni</h3>
+        <dl>
+            <dt data-i18n-key="BIRTH_DATE">Data di nascita</dt>
+            <dd>10/11/1993</dd>
+            <dt data-i18n-key="RESIDENCE">Residenza</dt>
+            <dd>Albignasego, PD</dd>
+            <dt>Email</dt>
+            <dd>federico.casotto93@gmail.com</dd>
+            <dt data-i18n-key="LANGUAGES">Lingue</dt>
+            <dd data-i18n-key="LANGS_LIST">Italiano, Inglese</dd>
+        </dl>
+    </section>
+    <section class="section experience">
+        <h3 data-i18n-key="WORK_EXPERIENCE">Esperienza Lavorativa</h3>
+        <ol>
+            <li>
+                <ul class="company">
+                    <li class="name">WEGG s.r.l.</li>
+                    <li class="role">Full Stack Developer</li>
+                    <li class="period">2018-Corrente</li>
+                    <li class="description" data-i18n-key="WEGG_DESCRIPTION">
+                        Progettazione, sviluppo e manutenzione di diverse applicazioni bussiness. Responsabile del
+                        completo sviluppo di due importanti applicazioni SaaS: EloquySPLA (Miscrosoft SPLA manager) e
+                        Trine (gestione progetti, budget e risorse). Dei suddetti progetti, ho partecipato attivamente
+                        alla scelta delle tecnologie da utilizzare, alla progettazione della base dati, studio e
+                        realizzazione dell'architettura del Web Server REST e alla produzione dell'applicazione
+                        frontend. Tecnologie maggiormente utilizzate: Java EE/Spring Boot, HTML5, CSS3/SCSS, Angular 2+,
+                        C# (console application), MySQL/SQL Server.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="company">
+                    <li class="name">Wintech S.p.A.</li>
+                    <li class="role">Full Stack Developer</li>
+                    <li class="period">2017</li>
+                    <li class="description" data-i18n-key="WINTECH_DESCRIPTION">
+                        Sviluppo applicazioni Web per progetti interni con tecnologia Angular 2+ e Java/Spring Boot.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="company">
+                    <li class="name">Sopra Steria Group</li>
+                    <li class="role">Mobile Developer</li>
+                    <li class="period">2016-2017</li>
+                    <li class="description" data-i18n-key="SOPRA_DESCRIPTION">
+                        Sviluppo applicazioni mobile ibride tramite l'utilizzo del framework opensource
+                        <a href="https://cordova.apache.org/">Apache Cordova</a>. Realizzazione di
+                        <i>single-page application</i> mediante HTML5/CSS3 e framework
+                        <a href="https://backbonejs.org/">Backbone.js</a>.
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+    <section class="section education">
+        <h3 data-i18n-key="EDUCATION">Formazione</h3>
+        <ol>
+            <li>
+                <ul class="institute">
+                    <li class="title" data-i18n-key="DEGREE_TITLE">Laurea triennale in Informatica</li>
+                    <li class="name">Universit&agrave; degli studi di Padova</li>
+                    <li class="period">2012-2016</li>
+                    <li class="grade"><span data-i18n-key="GRADE">Voto:</span> 88/110</li>
+                    <li class="description" data-i18n-key="DEGREE_DESCRIPTION">
+                        Principali materie di studio: Programmazione, Sistemi e Reti, Sviluppo Web e Ingegneria del
+                        Software. Realizzazione di diversi progetti software didattici. In particolare, progettazione e
+                        sviluppo in team di un'applicazione sperimentale per dispositivi mobile con Android nativo in
+                        grado di utilizzare le informazioni provenienti da dispositivi Beacon BLE 4.0.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="institute">
+                    <li class="title" data-i18n-key="DIPLOMA_TITLE">Diploma di Perito Industriale</li>
+                    <li class="name">I.T.I.S. F. Severi, Padova</li>
+                    <li class="period">2007-2012</li>
+                    <li class="grade"><span data-i18n-key="GRADE">Voto:</span> 80/100</li>
+                    <li class="description" data-i18n-key="DIPLOMA_DESCRIPTION">
+                        Specializzazione in Informatica. Fondamenti di programmazione imperativa e ad oggetti, nozioni
+                        fondamentali di sistemistica e base di dati.
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+    <section class="section skills breakpage">
+        <h3 data-i18n-key="SKILLS">Competenze</h3>
+        <ol>
+            <li>
+                <span class="name">Java</span>
+                <span class="description" data-i18n-key="JAVA_DESCRIPTION">
+                    Ottima conoscenza del linguaggio. Esperienza approfondita delle sue meccaniche. Ottima conoscenza
+                    del framework <a href="https://spring.io/">Spring Boot</a> e le sue librerie correlate (Jackson,
+                    <a href="https://hibernate.org/">Hibernate</a>).
+                </span>
+            </li>
+            <li>
+                <span class="name">Sviluppo Web</span>
+                <span class="description" data-i18n-key="WEB_DEV_DESCRIPTION">
+                    Conoscenza approfondita delle tecnologie fondamentali (HTML, CSS e Javascript). Esperienza con gli
+                    standard HTML5, CSS3 e framework Javascript Angular2+ e Typescript.
+                </span>
+            </li>
+            <li>
+                <span class="name">C#</span>
+                <span class="description" data-i18n-key="CSHARP_DESCRIPTION">
+                    Buona conoscenza del linguaggio, soprattutto per lo sviluppo di applicazioni desktop. Conoscenza
+                    base del framework
+                    <a href="https://dotnet.microsoft.com/apps/aspnet">ASP.NET</a>.
+                </span>
+            </li>
+            <li>
+                <span class="name">Database</span>
+                <span class="description" data-i18n-key="DBMS_DESCRIPTION">
+                    Buona conoscenza dei RDBMS MySQL e SQL Server. Conoscenza base dei linguaggi NoSQL e in particolare
+                    della libreria MongoDB.
+                </span>
+            </li>
+            <li>
+                <span class="name">Git</span>
+                <span class="description" data-i18n-key="GIT_DESCRIPTION">
+                    Ottima conoscenza della tecnologia e utilizzo abituale dello strumento per il versionamento del
+                    codice.
+                </span>
+            </li>
+            <li>
+                <span class="name">Microsoft Azure</span>
+                <span class="description" data-i18n-key="AZURE_DESCRIPTION">
+                    Discreta esperienza nell'uso della piattaforma. Integrazione con la piattaforma
+                    <a href="https://azure.microsoft.com/it-it/services/devops/">Microsoft DevOps</a>
+                    per realizzare CI/CD.
+                </span>
+            </li>
+            <li>
+                <span class="name">Mobile</span>
+                <span class="description" data-i18n-key="MOBILE_DESCRIPTION">
+                    Discreta esperienza nella realizzazione di applicazioni ibride. Conoscenza base in ambito mobile
+                    nativo: Android e Swift.
+                </span>
+            </li>
+            <li>
+                <span class="name" data-i18n-key="OTHER_SKILLS_NAME">Altro</span>
+                <span class="description" data-i18n-key="OTHER_SKILLS_DESCRIPTION">
+                    Buona conoscenza del linguaggio di script PHP e della liberia NodeJs. Esperienza base del linguaggio
+                    C++.
+                </span>
+            </li>
+        </ol>
+    </section>
+    <section class="section certifications">
+        <h3 data-i18n-key="CERTIFICATIONS">Certificazioni</h3>
+        <ol>
+            <li>
+                <ul>
+                    <li class="title">Microsoft Certified: Azure Fundamentals</li>
+                    <li class="badge">
+                        <img src="azurefund.png" alt="Azure certification badge" width="80" height="80" />
+                    </li>
+                    <li class="period" data-i18n-key="AZURE_FUN_PERIOD">Luglio 2019</li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+    <script src="en.js"></script>
+    <script src="i18n.js"></script>
+</body>
