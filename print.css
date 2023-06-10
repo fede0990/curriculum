@@ -117,6 +117,12 @@ header ol#quick-links a::after {
     font-size: 1rem;
 }
 
+header ol#quick-links a[href^="mailto"]::after {
+    overflow: hidden;
+    font-weight: normal;
+    text-indent: -2.9em;
+}
+
 header ol#quick-links li#print,
 header ol#quick-links li.translate {
     display: none !important;

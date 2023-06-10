@@ -25,4 +25,5 @@ const en = {
     "OTHER_SKILLS_NAME": "Other",
     "OTHER_SKILLS_DESCRIPTION": "Good knowledge of PHP scripting language and NodeJs library. Basic experience of the C++ language.",
     "AZURE_FUN_PERIOD": "July 2019",
+    "DRIVING_LICENSE": "Driving license"
 }
