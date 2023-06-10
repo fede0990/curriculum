@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
+:root {
+    --side-width: 40%;
+}
+
 /*#region HEADER*/
 
 header {
@@ -19,11 +23,11 @@ header {
 header::before {
     top: 0;
     left: 0;
-    width: 40%;
+    width: var(--side-width);
     height: 100vh;
     content: "";
     position: absolute;
-    background-color: #fbfbfb;
+    background-color: var(--fourth-color);
 }
 
 header img#picture {
@@ -141,7 +145,7 @@ section.section.personal-info dd {
 
 section.section {
     display: grid;
-    grid-template-columns: 40% 1fr;
+    grid-template-columns: var(--side-width) 1fr;
 }
 
 section.section h3 {
@@ -150,11 +154,11 @@ section.section h3 {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    background-color: #fbfbfb;
+    background-color: var(--fourth-color);
 }
 
-section.section:nth-child(even) h3 {
-    background-color: #f5f5f5;
+section.section:nth-child(odd) h3 {
+    background-color: var(--fifth-color);
 }
 
 section.section ol,
@@ -177,7 +181,7 @@ section.section ol > li:before {
     content: "\00a0 ";
     position: absolute;
     border-radius: 50%;
-    background-color: #fdb833;
+    background-color: var(--first-color);
 }
 
 section.section ol li ul {
@@ -187,7 +191,7 @@ section.section ol li ul {
     list-style: none;
     border-left: 2px solid #ebebeb;
     padding-left: 0.5em;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: var(--side-width) 60%;
 }
 
 /*#endregion SECTIONS */
@@ -292,7 +296,7 @@ section.section.skills ol li span.name {
 
 section.section.skills ol li span.name:before {
     content: "0" counter(section);
-    color: #fdb833;
+    color: var(--first-color);
     font-size: 2em;
     font-weight: bold;
     margin-right: 0.5em;
@@ -333,7 +337,7 @@ section.section.certifications ol li ul li.title {
 }
 
 section.section.certifications ol li ul li.period {
-    color: #797c7c;
+    color: var(--third-color);
     font-size: 0.9em;
     text-align: center;
 }

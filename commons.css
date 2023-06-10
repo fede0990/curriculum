@@ -5,7 +5,7 @@
     --second-color: #3d3d3d;
     --third-color: #808a9f;
     --fourth-color: #fbfbfb;
-    --fifth-color: #000;
+    --fifth-color: #f5f5f5;
 }
 
 * {
@@ -20,7 +20,7 @@ body {
 }
 
 a {
-    color: #fdb833;
+    color: var(--first-color);
 }
 
 a:visited {
