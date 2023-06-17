@@ -7,7 +7,7 @@ const en = {
     "EDUCATION": "Education",
     "SKILLS": "Skills",
     "CERTIFICATIONS": "Certifications",
-    "WEGG_DESCRIPTION": "Design, development and maintenance of various bussiness applications. Responsible for the complete development of two major SaaS applications: EloquySPLA (Miscrosoft SPLA manager) and Trine (project, budget and resource management). Of the aforementioned projects, I was actively involved in in choosing the technologies to be used, designing the database, studying and realization of the REST Web Server architecture and the production of the application frontend. Technologies mostly used: Java EE/Spring Boot, HTML5, CSS3/SCSS, Angular 2+, C# (console application), MySQL/SQL Server.",
+    "WEGG_DESCRIPTION": "Software developer with responsibility for design, development and maintenance of proprietary web applications. Taken part, as lead developer, in the implementation of several software projects; from the conception and identification of the technologies to be used, to the implementation of the different components both frontend and backend. Among the different projects, the main ones are: SaaS: EloquySPLA (SaaS for monitoring Miscrosoft SPLA licenses) and Trine Software (SaaS for project, budget and enterprise resource management). Most used technologies and tools: Java EE/Spring Boot, HTML5, CSS3/SCSS, Angular 2+, REST API, C# (console application), MySQL/SQL Server.",
     "WINTECH_DESCRIPTION": "Development of Web applications for internal use using Angular 2+ and Java/Spring Boot tecnologies",
     "SOPRA_DESCRIPTION": "Hybrid mobile application development through the use of opensource framework <a href='https://cordova.apache.org/'>Apache Cordova</a>. Implementation of <i>Single-page application</i> using HTML5/CSS3 and <a href='https://backbonejs.org/'>Backbone.js</a> tecnologies.",
     "GRADE": "Grade",
@@ -15,7 +15,8 @@ const en = {
     "DEGREE_DESCRIPTION": "Main subjects of study: Programming, Systems and Networks, Web Development and Software Engineering. Implementation of several educational software projects. In particular, design and                        team development of an experimental application for mobile devices with native Android capable of capable of using information from Beacon BLE 4.0 devices.",
     "DIPLOMA_TITLE": "Industrial Technician Diploma",
     "DIPLOMA_DESCRIPTION": "Computer Science major. Fundamentals of imperative and object-oriented programming, notions fundamentals of systems engineering and databases.",
-    "JAVA_DESCRIPTION": "Excellent knowledge of the language. Thorough experience of its mechanics. Excellent knowledge of the <a href='https://spring.io/'>Spring Boot</a> framework and its related libraries (Jackson, <a href='https://hibernate.org/'>Hibernate< /a>).",
+    "JAVA_DESCRIPTION": "Excellent knowledge of the language. Thorough experience of its mechanics. Excellent knowledge of the <a href='https://spring.io/'>Spring Boot</a> framework and its related libraries (Jackson, <a href='https://hibernate.org/'>Hibernate</a>).",
+    "WEB_DEV_NAME": "Web Development",
     "WEB_DEV_DESCRIPTION": "Thorough knowledge of fundamental technologies (HTML, CSS and Javascript). Experience with HTML5 standards, CSS3 and Angular2+ and Typescript Javascript frameworks.",
     "CSHARP_DESCRIPTION": "Good knowledge of the language, especially for the development of desktop applications. Basic knowledge of <a href='https://dotnet.microsoft.com/apps/aspnet'>ASP.NET</a> framework.",
     "DBMS_DESCRIPTION": "Good knowledge of RDBMS MySQL and SQL Server. Basic knowledge of NoSQL languages and in particular of the MongoDB library.",
@@ -25,5 +26,8 @@ const en = {
     "OTHER_SKILLS_NAME": "Other",
     "OTHER_SKILLS_DESCRIPTION": "Good knowledge of PHP scripting language and NodeJs library. Basic experience of the C++ language.",
     "AZURE_FUN_PERIOD": "July 2019",
-    "DRIVING_LICENSE": "Driving license"
+    "DRIVING_LICENSE": "Driving license",
+    "PRINCIPLES_NAME": "SW Principles",
+    "PRINCIPLES_DESCRIPTION": "Excellent knowledge of programming fundamentals ( S.O.L.I.D., KISS, Design patterns ), good experience in their application for more maintainable code.",
+    "REST_DESCRIPTION": "Excellent knowledge of this software architecture for communication between distributed systems and applications. Good experience in building products that tend to apply RESTful concepts."
 }
