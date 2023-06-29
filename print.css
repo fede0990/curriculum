@@ -118,8 +118,7 @@ header ol#quick-links a::after {
 
 header ol#quick-links a[href^="mailto"]::after {
     overflow: hidden;
-    font-weight: normal;
-    text-indent: -2.9em;
+    text-indent: -3em;
 }
 
 header ol#quick-links li#print,
